@@ -152,6 +152,14 @@ void Game::setupStockingA()
 
 void Game::setupBackgroundA()
 {
+	if (!m_backgroundATexture.loadFromFile("ASSETS\\IMAGES\\fire-place-red.png"))
+	{
+		cout << "Error loading Red fire place" << endl;
+	}
+
+	m_backgroundASprite.setPosition(0.0f, 0.0f);
+	m_backgroundASprite.setScale(4, 4);
+	m_backgroundASprite.setTexture(m_backgroundATexture);
 }
 
 void Game::setupStockingB()
@@ -168,6 +176,14 @@ void Game::setupStockingB()
 
 void Game::setupBackgroundB()
 {
+	if (!m_backgroundBTexture.loadFromFile("ASSETS\\IMAGES\\fire-place-blue.png"))
+	{
+		cout << "Error loading Red fire place" << endl;
+	}
+
+	m_backgroundBSprite.setPosition(0.0f, 0.0f);
+	m_backgroundASprite.setScale(4, 4);
+	m_backgroundBSprite.setTexture(m_backgroundBTexture);
 }
 
 void Game::setupStockingC()
@@ -184,5 +200,13 @@ void Game::setupStockingC()
 
 void Game::setupBackgroundC()
 {
+	if (!m_backgroundCTexture.loadFromFile("ASSETS\\IMAGES\\fire-place-purple.png"))
+	{
+		cout << "Error loading Red fire place" << endl;
+	}
+
+	m_backgroundCSprite.setPosition(0.0f, 0.0f);
+	m_backgroundASprite.setScale(4, 4);
+	m_backgroundCSprite.setTexture(m_backgroundCTexture);
 }
 
