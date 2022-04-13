@@ -1,4 +1,9 @@
-
+//Name: Síne Whooley
+//Student Number: C00271403
+//Date: 13/04/22
+//-----------------------
+//Christmas Interactive
+//-----------------------
 
 #ifdef _DEBUG 
 #pragma comment(lib,"sfml-graphics-d.lib") 

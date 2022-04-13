@@ -1,3 +1,10 @@
+//Name: Síne Whooley
+//Student Number: C00271403
+//Date: 13/04/22
+//-----------------------
+//Christmas Interactive
+//-----------------------
+
 
 #ifndef GAME_HPP
 #define GAME_HPP
@@ -20,6 +27,30 @@ private:
 	
 	void setupFontAndText();
 	void setupSprite();
+
+	void setupStockingA();
+	sf::Sprite m_stockingASprite;
+	sf::Texture m_stockingATexture;
+
+	void setupBackgroundA();
+	sf::Sprite m_backgroundASprite;
+	sf::Texture m_backgroundATexture;
+
+	void setupStockingB();
+	sf::Sprite m_stockingBSprite;
+	sf::Texture m_stockingBTexture;
+
+	void setupBackgroundB();
+	sf::Sprite m_backgroundBSprite;
+	sf::Texture m_backgroundBTexture;
+
+	void setupStockingC();
+	sf::Sprite m_stockingCSprite;
+	sf::Texture m_stockingCTexture;
+
+	void setupBackgroundC();
+	sf::Sprite m_backgroundCSprite;
+	sf::Texture m_backgroundCTexture;
 
 	sf::RenderWindow m_window; // main SFML window
 	sf::Font m_ArialBlackfont; // font used by message

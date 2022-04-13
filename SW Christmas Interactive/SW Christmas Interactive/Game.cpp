@@ -1,8 +1,13 @@
-
+//Name: Síne Whooley
+//Student Number: C00271403
+//Date: 13/04/22
+//-----------------------
+//Christmas Interactive
+//-----------------------
 
 #include "Game.h"
 #include <iostream>
-
+using namespace std;
 
 /// default constructor
 /// setup the window properties
@@ -13,6 +18,10 @@ Game::Game() :
 {
 	setupFontAndText();												// load font 
 	setupSprite();													// load texture
+	setupStockingA();
+	setupStockingB();
+	setupStockingC();
+
 }
 
 /// default destructor we didn't dynamically allocate anything
@@ -92,6 +101,9 @@ void Game::render()
 	m_window.clear(sf::Color::White);
 	m_window.draw(m_welcomeMessage);
 	m_window.draw(m_logoSprite);
+	m_window.draw(m_stockingASprite);
+	m_window.draw(m_stockingBSprite);
+	m_window.draw(m_stockingCSprite);
 	m_window.display();
 }
 
@@ -125,3 +137,52 @@ void Game::setupSprite()
 	m_logoSprite.setPosition(0.0f, 650.0f);
 	m_logoSprite.setScale(1.7, 1.7);
 }
+
+void Game::setupStockingA()
+{
+	if (!m_stockingATexture.loadFromFile("ASSETS\\IMAGES\\stocking-2.png"))
+	{
+		cout << "Error loading Red Stocking" << endl;
+	}
+
+	m_stockingASprite.setPosition(25.0f, 270.0f);
+	m_stockingASprite.setScale(0.3, 0.3);
+	m_stockingASprite.setTexture(m_stockingATexture);
+}
+
+void Game::setupBackgroundA()
+{
+}
+
+void Game::setupStockingB()
+{
+	if (!m_stockingBTexture.loadFromFile("ASSETS\\IMAGES\\stocking-2B.png"))
+	{
+		cout << "Error loading Red Stocking" << endl;
+	}
+
+	m_stockingBSprite.setPosition(225.0f, 270.0f);
+	m_stockingBSprite.setScale(0.3, 0.3);
+	m_stockingBSprite.setTexture(m_stockingBTexture);
+}
+
+void Game::setupBackgroundB()
+{
+}
+
+void Game::setupStockingC()
+{
+	if (!m_stockingCTexture.loadFromFile("ASSETS\\IMAGES\\stocking-2C.png"))
+	{
+		cout << "Error loading Red Stocking" << endl;
+	}
+
+	m_stockingCSprite.setPosition(425.0f, 270.0f);
+	m_stockingCSprite.setScale(0.3, 0.3);
+	m_stockingCSprite.setTexture(m_stockingCTexture);
+}
+
+void Game::setupBackgroundC()
+{
+}
+
