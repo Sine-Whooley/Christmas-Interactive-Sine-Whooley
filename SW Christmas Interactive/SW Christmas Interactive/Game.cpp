@@ -8,7 +8,7 @@
 /// setup the window properties
 /// load and setup the text 
 Game::Game() :
-	m_window{ sf::VideoMode{ 800U, 600U, 32U }, "SFML Game" },
+	m_window{ sf::VideoMode{ 700U, 900U, 32U }, "Christmas Interactive" },
 	m_exitGame{false}												//when true game will exit
 {
 	setupFontAndText();												// load font 
@@ -98,29 +98,30 @@ void Game::render()
 /// load the font and setup the text message for screen
 void Game::setupFontAndText()
 {
-	if (!m_ArialBlackfont.loadFromFile("ASSETS\\FONTS\\ariblk.ttf"))
+	if (!m_ArialBlackfont.loadFromFile("ASSETS\\FONTS\\Antonio-Regular.ttf"))
 	{
 		std::cout << "problem loading arial black font" << std::endl;
 	}
 	m_welcomeMessage.setFont(m_ArialBlackfont);
-	m_welcomeMessage.setString("SFML Game");
-	m_welcomeMessage.setStyle(sf::Text::Underlined | sf::Text::Italic | sf::Text::Bold);
-	m_welcomeMessage.setPosition(40.0f, 40.0f);
-	m_welcomeMessage.setCharacterSize(80U);
-	m_welcomeMessage.setOutlineColor(sf::Color::Red);
-	m_welcomeMessage.setFillColor(sf::Color::Black);
-	m_welcomeMessage.setOutlineThickness(3.0f);
+	m_welcomeMessage.setString("Happy Christmas");
+	m_welcomeMessage.setStyle(sf::Text::Italic | sf::Text::Bold);
+	m_welcomeMessage.setPosition(125.0f, 100.0f);
+	m_welcomeMessage.setCharacterSize(70U);
+	m_welcomeMessage.setOutlineColor(sf::Color::Black);
+	m_welcomeMessage.setFillColor(sf::Color{ 219,31,7 });
+	m_welcomeMessage.setOutlineThickness(2.0f);
 
 }
 
 /// load the texture and setup the sprite for the logo
 void Game::setupSprite()
 {
-	if (!m_logoTexture.loadFromFile("ASSETS\\IMAGES\\SFML-LOGO.png"))
+	if (!m_logoTexture.loadFromFile("ASSETS\\IMAGES\\Decor-1.png"))
 	{
 		
-		std::cout << "problem loading logo" << std::endl;			// simple error message if previous call fails
+		std::cout << "Problem loading logo" << std::endl;			// simple error message if previous call fails
 	}
 	m_logoSprite.setTexture(m_logoTexture);
-	m_logoSprite.setPosition(300.0f, 180.0f);
+	m_logoSprite.setPosition(0.0f, 650.0f);
+	m_logoSprite.setScale(1.7, 1.7);
 }
